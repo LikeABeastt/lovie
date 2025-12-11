@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>I love you, Lovie</title>
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Libre+Baskerville&display=swap" rel="stylesheet">
+<style>
+    /* Reset & body */
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #f5f0e6; /* Vintage paper color */
+        font-family: 'Libre Baskerville', serif;
+        padding: 20px;
+    }
+
+    /* Envelope container */
+    .envelope-container {
+        perspective: 1200px;
+        max-width: 600px;
+        width: 100%;
+    }
+
+    /* Envelope */
+    .envelope {
+        width: 100%;
+        background-color: #c19a6b;
+        border: 2px solid #8b5e3c;
+        border-radius: 10px;
+        box-shadow: 0 8px 15px rgba(0,0,0,0.3);
+        cursor: pointer;
+        transform-style: preserve-3d;
+        transition: transform 1s;
+        position: relative;
+        overflow: hidden;
+    }
+
+    /* Flap */
+    .flap {
+        width: 100%;
+        height: 50%;
+        background-color: #a67c52;
+        clip-path: polygon(0 0, 100% 0, 50% 100%);
+        transform-origin: top;
+        transition: transform 1s;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 2;
+    }
+
+    /* Letter */
+    .letter {
+        position: relative;
+        background-color: #fff8e7;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        padding: 20px;
+        font-size: 18px;
+        line-height: 1.6;
+        color: #5c4033;
+        font-family: 'Arial', 'Helvetica', sans-serif;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 1s ease, padding 1s ease;
+    }
+
+    /* Envelope open state */
+    .envelope.open .flap {
+        transform: rotateX(-180deg);
+    }
+
+    .envelope.open .letter {
+        max-height: 5000px; /* very high value to accommodate long text */
+        padding: 20px;
+    }
+
+    /* Instruction */
+    .instruction {
+        text-align: center;
+        margin-top: 20px;
+        font-style: italic;
+        color: #8b5e3c;
+        font-size: 16px;
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+        .letter {
+            font-size: 16px;
+            padding: 15px;
+        }
+        .letter p {
+    margin-bottom: 16px; /* space between paragraphs */
+}
+    }
+</style>
+</head>
+<body>
+<div class="envelope-container">
+    <div class="envelope" id="envelope">
+        <div class="flap"></div>
+        <div class="letter" id="letter">
+            <p>Hello lovie, it's your lovie speaking here. Alam moba na everytime na magkasama tayo at everytime na tinitignan kita eh over ako sa kilig? Gusto kolang malaman mo na kung gaano kita na a-appreciate, at kung gaano ka kahalaga sakin. Ikaw yung tipo ng babae na deserving ng totoong pagmamahal, na deserving ng mga magagandang bagay, and I will not stop reminding you na you are worthyyy!!</p>
+            <p>Alam mo lovie, sobrang proud ako sa'yo, I see you trying, I see you learning, I see you -- despite I know how hard it is for you. (School stuffs, bahay stuffs, family stuffs) kaya ayaw konang dumagdag pa pero minsan hindi talaga maiiwasan eh. I see how you are trying your best to be better, to be acknowledge by your own family. Hindi mo kailangan maging perfect para maging worthy dahil deserving ka ng pagmamahal at respeto. You are worthy of everything, lovie.</p>
+            <p>Alam kong hindi madali -- lalo na we're only teenagers and finifigure out pa natin lahat ng bagay. And kung mapagod ka lovie, okay lang. Nandito lang ako para hawakan ka at para pagaanin yung bigat ng nararamdaman mo. I got you always, lovie. I will always be your number one supporter. I love you:)</p>
+            <p>Hindi porket hindi proud ang family mo sayo, ibig sabihin nun mas mababa ang value mo. Wag mong paniwalaan yun for a second. Family opinions can be complicated and sometimes unfair, pero hindi yun sukatan ng worth mo. Ako? I am so, so proud of you — araw-araw. I celebrate your wins, I comfort your losses, and I remind you of your strengths when you forget them. Kahit anong sabihin nila, para sa akin, you’re already killing it.</p>
+            <p>Salamat sa pagiging patient, kahit minsan naiinis ka. Salamat sa tawa mo, sa weird jokes mo, sa mga quiet moments natin na parang walang nangyayari pero sobrang mahalaga. Thank you for trusting me with parts of you — the messy parts, the funny parts, the vulnerable parts. I promise I won’t take that trust for granted.</p>
+            <p>Gusto kong malaman mo rin na andito ako — hindi para mag-criticize ng sobra, kundi para mag-build up. When you need advice, I’ll give it. When you need someone to celebrate small wins — like nag-succeed ka sa maliit na bagay, o naka-make ka ng bagong hobby — I’ll be the loudest fan. When you cry, I’ll hand you tissues and hold you. When you laugh, I’ll laugh with you until we both can’t breathe.</p>
+            <p>Promise: hindi kita iiwan sa laban na to. Kung may goals ka, kasama mo ako sa plano. Kahit mapagod ka, I will be there to remind you why you started. Kahit matakot ka, I will be your courage. Kahit magkamali ka, I will still see the good in you and love you pa rin nang sobra.</p>
+            <p>Lovie ko, you are not defined by anyone’s doubt. You are defined by your kindness, your resilience, your willingness to try. You are beautiful in ways that matter — the way you care, the way you think, the way you show up. You deserve so many good things and I will spend my time making sure you remember that when the world tries to make you forget.</p>
+            <p>I love you more than words — pero babanggit ko pa rin: I love you. I love you in small texts, in long talks, in lazy afternoons, sa mga plano natin, at sa mga hindi pa natin naliligawan. You are my favorite, my number one, my partner in everything.</p>
+            <p>(Sana makaisa ulit. Joke HAHAHAHAHHA. Lagi akong nag-iinit kapag kasama kita huhu) I love you, lovieeeee</p>
+        </div>
+    </div>
+    <div class="instruction">Lovie, pindutin mo yung envelope. HEHEHE Iloveyou, lovie</div>
+</div>
+
+<script>
+    const envelope = document.getElementById('envelope');
+    envelope.addEventListener('click', () => {
+        envelope.classList.toggle('open');
+    });
+</script>
+</body>
+</html>
